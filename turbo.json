@@ -1,6 +1,7 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
+  "globalDotEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -12,6 +13,13 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "db:migrate:deploy": {},
+    "db:migrate:dev": {},
+    "db:push": {},
+    "db:seed": {},
+    "generate": {
+      "dependsOn": ["^generate"]
     }
   }
 }
