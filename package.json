@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "dotenv -- turbo dev",
+    "dev:backend": "turbo dev:backend -- --preserveWatchOutput false",
+    "start:backend": "turbo start:backend -- --preserveWatchOutput false",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "db:migrate:deploy": "dotenv -- turbo run db:migrate:deploy",

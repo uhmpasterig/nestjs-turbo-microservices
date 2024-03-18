@@ -1,5 +1,5 @@
 {
   "extends": "@repo/tsconfig/nestjs.json",
-  "include": ["**/*.ts", "**/*.config.js"],
+  "include": ["**/*.ts", "tsup.config.ts"],
   "exclude": ["node_modules"]
 }
